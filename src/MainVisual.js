@@ -35,14 +35,13 @@ const SubTitle2 = styled(SubTitle1)`
     padding: 2px 17px 17px;
     letter-spacing: 3px;
 `;
-
 const TopImageMouse = styled.img`
     position: absolute;
     max-width: 60%;
     object-fit: cover;
     opacity: 0.9;
     right: 20px;
-    transform: translateY(-3%);
+    transform: translateY(-4%);
 `;
 
 function MainVisual() {
