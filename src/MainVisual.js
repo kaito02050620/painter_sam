@@ -3,7 +3,7 @@ import TopContainerImage from "./assets/image/top_mouse.png";
 
 const TopContainer = styled.div`
     position: relative;
-    max-width: 1100px;
+    max-width: 1200px;
     height: 100vh;
     padding: 0 20px;
     margin: 0 auto;
@@ -20,6 +20,7 @@ const TopContainerTitle = styled.div`
         background-color: #5e5e5e;
         color: #ebebeb;
         font-size: 60px;
+        letter-spacing: 2px;
     }
 `;
 const SubTitle1 = styled.p`
@@ -37,16 +38,16 @@ const SubTitle2 = styled(SubTitle1)`
 `;
 const TopImageMouse = styled.img`
     position: absolute;
-    max-width: 60%;
+    max-width: 55%;
     object-fit: cover;
     opacity: 0.9;
     right: 20px;
-    transform: translateY(-4%);
+    transform: translateY(-10%);
 `;
 
 function MainVisual() {
     return (
-        <>
+        <div>
             <TopContainer>
                 <TopImageMouse
                     src={TopContainerImage}
@@ -58,7 +59,7 @@ function MainVisual() {
                     <SubTitle2>Mause&nbsp;Painter&nbsp;Sam</SubTitle2>
                 </TopContainerTitle>
             </TopContainer>
-        </>
+        </div>
     );
 }
 
