@@ -14,6 +14,12 @@ const WorkWrapper = styled.div`
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+    @media (max-width: 600px) {
+        flex-wrap: wrap-reverse;
+        align-content: center;
+        justify-content: center;
+    }
 `;
 const WorkText = styled.p`
     font-size: 40px;
@@ -23,6 +29,15 @@ const WorkText = styled.p`
     font-weight: 400;
     font-size: 40px;
     line-height: 48px;
+
+    @media (max-width: 830px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 600px) {
+        margin-top: 30px;
+        font-size: 20px;
+    }
 `;
 const WorkImage = styled.div`
     & div {
