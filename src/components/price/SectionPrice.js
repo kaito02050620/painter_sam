@@ -16,12 +16,16 @@ const BackGround = styled.div`
         padding: 50px;
     }
 
-    @media (max-width: 1130px) {
-        /* padding: 15px; */
+    @media (max-width: 1000px) {
+        margin-top: 15px;
     }
 
     @media (max-width: 930px) {
         margin-bottom: 40px;
+    }
+
+    @media (max-width: 850px) {
+        margin-top: 10px;
     }
 
     @media (max-width: 500px) {
@@ -237,13 +241,13 @@ function SectionPrice() {
                     <Wrapper>
                         <ColorBox>
                             <OneColorPalette>単色</OneColorPalette>
-                            <ColorPrice>&yen;&nbsp;3000～</ColorPrice>
+                            <ColorPrice>&yen;&nbsp;4000～</ColorPrice>
                         </ColorBox>
                         <ColorBox>
                             <ManyColorPalette>
                                 <span>複数色</span>
                             </ManyColorPalette>
-                            <ColorPrice>&yen;&nbsp;5000～</ColorPrice>
+                            <ColorPrice>&yen;&nbsp;6000～</ColorPrice>
                         </ColorBox>
                     </Wrapper>
                 </PriceItem>

@@ -28,6 +28,12 @@ const FooterWrapper = styled.div`
 const FooterLogo = styled.img`
     width: 260px;
     object-fit: cover;
+    opacity: 0.9;
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 1;
+    }
 
     @media (max-width: 650px) {
         width: 150px;
@@ -59,6 +65,11 @@ const FooterNavigation = styled.nav`
             & a {
                 text-decoration: none;
                 color: #ebebeb;
+                transition: 0.2s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
             }
 
             &:last-child {
@@ -105,7 +116,11 @@ function Footer() {
                             </Link>
                         </li>
                         <li>
-                            <a href="https://www.ielove.co.jp/column/hatena/00242/">
+                            <a
+                                href="https://forms.gle/FZgut4MH34NcEdzp6"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 問い合わせ
                             </a>
                         </li>

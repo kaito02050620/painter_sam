@@ -1,7 +1,7 @@
 import React from "react";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 
-function GalleryText({ obj }) {
+function GalleryText({ base, design, descripsion }) {
     return (
         <ChakraProvider>
             <Box>
@@ -16,7 +16,7 @@ function GalleryText({ obj }) {
                     >
                         <p>
                             <span>ﾍﾞｰｽ&nbsp;&#58;&nbsp;</span>
-                            {obj.base}
+                            {base}
                         </p>
                     </li>
                     <li
@@ -28,7 +28,7 @@ function GalleryText({ obj }) {
                     >
                         <p>
                             <span>ﾃﾞｻﾞｲﾝ&nbsp;&#58;&nbsp;</span>
-                            {obj.design}
+                            {design}
                         </p>
                     </li>
                     <li
@@ -37,7 +37,7 @@ function GalleryText({ obj }) {
                             color: "#373737",
                         }}
                     >
-                        <p>{obj.descripsion}</p>
+                        <p>{descripsion}</p>
                     </li>
                 </ul>
             </Box>

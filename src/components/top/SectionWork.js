@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import workimage from "../../assets/image/work.png";
 
 const WorkContainer = styled.div`
     position: relative;
@@ -8,6 +9,7 @@ const WorkContainer = styled.div`
     background-color: rgba(211, 211, 211, 0.8);
 `;
 const WorkWrapper = styled.div`
+    position: relative;
     max-width: 1100px;
     height: 100%;
     padding: 0 20px;
@@ -22,6 +24,8 @@ const WorkWrapper = styled.div`
     }
 `;
 const WorkText = styled.p`
+    position: absolute;
+    z-index: 300;
     font-size: 40px;
     color: #373737;
     font-family: "Inter";
@@ -37,13 +41,32 @@ const WorkText = styled.p`
     @media (max-width: 600px) {
         margin-top: 30px;
         font-size: 20px;
+        bottom: 20%;
     }
 `;
 const WorkImage = styled.div`
-    & div {
-        transform: translate(-50% -50%);
+    position: absolute;
+    right: 20px;
+    max-width: 700px;
+
+    @media (max-width: 980px) {
         max-width: 500px;
-        background-color: red;
+    }
+
+    @media (max-width: 830px) {
+        max-width: 400px;
+    }
+
+    @media (max-width: 600px) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+    }
+
+    & img {
+        object-fit: cover;
+        transform: translate(-50% -50%);
+        opacity: 0.65;
     }
 `;
 
@@ -53,7 +76,7 @@ function SectionWork() {
             <WorkWrapper>
                 <WorkText>大切に、丁寧に仕上げます。</WorkText>
                 <WorkImage>
-                    <div>image</div>
+                    <img src={workimage} alt="作業風景"></img>
                 </WorkImage>
             </WorkWrapper>
         </WorkContainer>

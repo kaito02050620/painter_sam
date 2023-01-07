@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { HiMail } from "react-icons/hi";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
@@ -28,6 +29,16 @@ const HamburgarButton = styled.button`
     appearance: none;
     width: 80px;
     height: 40px;
+    opacity: 0.7;
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &.open {
+        height: 50px;
+    }
 `;
 const Line1 = styled.span`
     position: absolute;
@@ -37,8 +48,15 @@ const Line1 = styled.span`
     width: 80px;
     height: 3px;
     background-color: #5e5e5e;
+    transition: all 0.4s;
+
+    &.open {
+        transform: translateY(20px) rotateZ(45deg);
+        background-color: #ebebeb;
+    }
 
     @media (max-width: 590px) {
+        height: 2px;
         right: 0;
         width: 50px;
     }
@@ -52,9 +70,21 @@ const Line2 = styled.span`
     width: 60px;
     height: 3px;
     background-color: #5e5e5e;
+    transition: all 0.4s;
+
+    &.open {
+        width: 80px;
+        transform: rotateZ(-45deg);
+        background-color: #ebebeb;
+    }
 
     @media (max-width: 590px) {
+        height: 2px;
         width: 35px;
+
+        &.open {
+            width: 50px;
+        }
     }
 `;
 const FormButton = styled.a`
@@ -67,17 +97,15 @@ const FormButton = styled.a`
     justify-content: center;
     cursor: pointer;
     opacity: 0.9;
+    transition: 0.15s;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #4865c9;
+    }
 
     @media (max-width: 590px) {
-        position: absolute;
-        top: 90px;
-        right: 0;
-        margin-right: 0;
-        width: 45px;
-        height: 230px;
-        -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
-        text-align: center;
+        visibility: hidden;
     }
 
     & p {
@@ -110,7 +138,7 @@ const FormButton = styled.a`
 const HamburgarMenu = styled.div`
     position: fixed;
     background-color: #373737;
-    width: 60%;
+    width: 80%;
     height: 100vh;
     right: 0;
     z-index: 4000;
@@ -118,7 +146,16 @@ const HamburgarMenu = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    transform: translateX(110%);
+    transition: all 0.4s;
+
+    @media (max-width: 590px) {
+        width: 80%;
+    }
+
+    &.open {
+        transform: translateX(0);
+    }
 
     & ul {
         & li {
@@ -129,16 +166,36 @@ const HamburgarMenu = styled.div`
             text-align: center;
             margin-bottom: 30px;
             cursor: pointer;
+            text-decoration: none;
+
+            @media (max-width: 590px) {
+                font-size: 18px;
+                width: 100%;
+            }
 
             & :hover {
                 transition: 0.2s;
                 color: #7997ff;
             }
 
+            & a {
+                text-decoration: none;
+            }
+
+            & p {
+                color: #ebebeb;
+            }
+
             & svg {
-                width: 40px;
-                height: 40px;
+                width: 60px;
+                height: 60px;
                 display: inline;
+                color: #ebebeb;
+
+                @media (max-width: 590px) {
+                    width: 40px;
+                    height: 40px;
+                }
             }
 
             &:last-child {
@@ -159,38 +216,76 @@ const CloseBackGround = styled.div`
     display: flex;
     cursor: pointer;
     display: none;
+
+    &.open {
+        display: block;
+    }
 `;
 
 function TopNavigation() {
+    const [active, setActive] = useState(false);
+
+    const MenuToggle = () => {
+        setActive(!active);
+    };
+
     return (
         <>
             <Navigation>
-                <FormButton>
+                <FormButton
+                    href="https://forms.gle/FZgut4MH34NcEdzp6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={active ? "open" : ""}
+                >
                     <HiMail />
                     <p>ご依頼はこちらから</p>
                 </FormButton>
-                <HamburgarButton>
-                    <Line1></Line1>
-                    <Line2></Line2>
+                <HamburgarButton
+                    onClick={MenuToggle}
+                    className={active ? "open" : ""}
+                >
+                    <Line1 className={active ? "open" : ""}></Line1>
+                    <Line2 className={active ? "open" : ""}></Line2>
                 </HamburgarButton>
             </Navigation>
-            <HamburgarMenu>
+            <HamburgarMenu className={active ? "open" : ""}>
                 <ul>
                     <li>
-                        <p>ギャラリー</p>
+                        <Link to="/">
+                            <p>トップ</p>
+                        </Link>
                     </li>
                     <li>
-                        <p>料金表&nbsp;&&nbsp;使用上の注意</p>
+                        <Link to="/gallery">
+                            <p>ギャラリー</p>
+                        </Link>
                     </li>
                     <li>
-                        <p>問い合わせ</p>
+                        <Link to="/price">
+                            <p>料金表&nbsp;&&nbsp;使用上の注意</p>
+                        </Link>
                     </li>
                     <li>
-                        <AiFillTwitterCircle />
+                        <a
+                            href="https://forms.gle/FZgut4MH34NcEdzp6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <p>問い合わせ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/paint_Samsan">
+                            <AiFillTwitterCircle />
+                        </a>
                     </li>
                 </ul>
             </HamburgarMenu>
-            <CloseBackGround></CloseBackGround>
+            <CloseBackGround
+                className={active ? "open" : ""}
+                onClick={MenuToggle}
+            ></CloseBackGround>
         </>
     );
 }

@@ -6,6 +6,7 @@ import Top from "./components/top/Top";
 import Gallery from "./components/gallery/Gallery";
 import Price from "./components/price/Price";
 import { BrowserRouter as Ro, Route, Routes } from "react-router-dom";
+import ScrollTop from "./Location";
 
 const GrobalContainer = styled.div`
     background-color: #ebebeb;
@@ -16,6 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Ro>
         <GrobalContainer>
+            <ScrollTop />
             <Routes>
                 <Route path="/" element={<Top />}></Route>
                 <Route path="/price" element={<Price />}></Route>

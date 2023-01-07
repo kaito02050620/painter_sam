@@ -32,6 +32,8 @@ const DescriptionWrapper = styled.ul`
     }
 `;
 const Description = styled.li`
+    max-width: 1100px;
+    margin: 0 auto;
     font-size: 20px;
     font-family: "Roboto";
     color: #5e5e5e;
@@ -59,9 +61,8 @@ function SectionPrecautions() {
     return (
         <BackGround>
             <DescriptionWrapper>
-                <DescriptionItem description="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" />
-                <DescriptionItem description="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" />
-                <DescriptionItem description="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" />
+                <DescriptionItem description="塗装されたマウスはラッカー塗料にてコーティングされています。手汗などに対する耐久性はありますが、耐シンナー性はございませんので掃除の際はアルコール入りのウェットティッシュ等は使わないようにお願い致します。" />
+                <DescriptionItem description="都度確認し塗装作業していますが、塗装中まれに小さなゴミが入ってしまう可能性があります。ご理解宜しくお願い致します。" />
             </DescriptionWrapper>
         </BackGround>
     );
