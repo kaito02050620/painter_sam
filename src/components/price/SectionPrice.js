@@ -57,6 +57,7 @@ const PriceItem = styled.li`
 const TitleText = styled.h3`
     color: #5e5e5e;
     font-size: 40px;
+    font-family: "Roboto", sans-serif;
     margin-right: 40px;
 
     @media (max-width: 1130px) {
@@ -81,6 +82,7 @@ const OneColorPalette = styled.p`
     height: 100px;
     color: #5e5e5e;
     font-size: 30px;
+    font-family: "Roboto", sans-serif;
     line-height: 100px;
     text-align: center;
     background-color: #64cdcd;
@@ -107,6 +109,7 @@ const ManyColorPalette = styled.p`
     height: 100px;
     color: #5e5e5e;
     font-size: 30px;
+    font-family: "Roboto", sans-serif;
     line-height: 100px;
     text-align: center;
     background-color: #64cdcd;
@@ -157,6 +160,7 @@ const ColorPrice = styled.p`
     color: #5e5e5e;
     margin-left: 40px;
     font-size: 30px;
+    font-family: "Roboto", sans-serif;
     vertical-align: middle;
 
     @media (max-width: 930px) {
@@ -192,6 +196,7 @@ const ColorBox = styled.div`
 const SpecialColor = styled.p`
     margin-left: 90px;
     font-size: 40px;
+    font-family: "Roboto", sans-serif;
     color: #5e5e5e;
 
     @media (max-width: 930px) {
@@ -205,6 +210,7 @@ const SpecialColor = styled.p`
     }
 
     & span {
+        font-family: "Roboto", sans-serif;
         font-size: 20px;
         margin-left: 20px;
 

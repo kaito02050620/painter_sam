@@ -9,7 +9,7 @@ const TopContainerTitle = styled.div`
     }
 
     & h1 {
-        font-family: "DotGothic16";
+        font-family: "DotGothic16", sans-serif;
         padding: 12px 30px;
         background-color: #5e5e5e;
         color: #ebebeb;

@@ -8,7 +8,7 @@ function GalleryText({ base, design, descripsion }) {
                 <ul>
                     <li
                         style={{
-                            fontFamliy: "Roboto",
+                            fontFamily: "Roboto, sans-serif",
                             color: "#373737",
                             marginTop: "16px",
                             marginBottom: "16px",
@@ -21,7 +21,7 @@ function GalleryText({ base, design, descripsion }) {
                     </li>
                     <li
                         style={{
-                            fontFamliy: "Roboto",
+                            fontFamily: "Roboto, sans-serif",
                             color: "#373737",
                             marginBottom: "16px",
                         }}
@@ -33,7 +33,7 @@ function GalleryText({ base, design, descripsion }) {
                     </li>
                     <li
                         style={{
-                            fontFamliy: "Roboto",
+                            fontFamily: "Roboto, sans-serif",
                             color: "#373737",
                         }}
                     >

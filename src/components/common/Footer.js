@@ -44,7 +44,8 @@ const FooterLogo = styled.img`
 `;
 const FooterNavigation = styled.nav`
     box-sizing: border-box;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
+
     font-size: 18px;
     color: #ebebeb;
     font-weight: 400;
@@ -87,7 +88,7 @@ const FooterCopyRight = styled.small`
     color: #ebebeb;
     letter-spacing: 1.5px;
     opacity: 0.8;
-    font-family: "Noto sans";
+    font-family: "Roboto", sans-serif;
 
     @media (max-width: 600px) {
         opacity: 0.6;

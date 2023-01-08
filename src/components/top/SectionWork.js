@@ -27,9 +27,9 @@ const WorkText = styled.p`
     position: absolute;
     z-index: 300;
     font-size: 40px;
-    color: #373737;
-    font-family: "Inter";
-    font-style: normal;
+    color: #161616;
+    text-shadow: #a0a0a0 0px 0px 7px;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 40px;
     line-height: 48px;
@@ -66,7 +66,7 @@ const WorkImage = styled.div`
     & img {
         object-fit: cover;
         transform: translate(-50% -50%);
-        opacity: 0.65;
+        opacity: 0.8;
     }
 `;
 

@@ -11,7 +11,7 @@ const TopContainerTitle = styled.div`
     & p {
         text-align: center;
         color: #5e5e5e;
-        font-family: "DotGothic16";
+        font-family: "DotGothic16", sans-serif;
         padding: 12px 0px;
         font-size: 60px;
         transform: translateX(100px);
@@ -36,7 +36,7 @@ const PriceText = styled.h1`
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
-    font-family: "DotGothic16";
+    font-family: "DotGothic16", sans-serif;
     padding: 12px 30px;
     background-color: #5e5e5e;
     color: #ebebeb;
@@ -62,7 +62,7 @@ const PriceText = styled.h1`
     }
 `;
 const PrecautionsText = styled.h1`
-    font-family: "DotGothic16";
+    font-family: "DotGothic16", sans-serif;
     padding: 12px 30px;
     background-color: #5e5e5e;
     color: #ebebeb;
@@ -79,9 +79,9 @@ const PrecautionsText = styled.h1`
     }
 
     @media (max-width: 600px) {
-        letter-spacing: 8px;
+        letter-spacing: 7px;
         font-size: 30px;
-        padding: 10px 17px;
+        padding: 10px 10px;
     }
 `;
 

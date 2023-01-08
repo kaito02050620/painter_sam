@@ -22,7 +22,7 @@ function GalleryButton() {
                             h={{ base: "60px", md: "80px", lg: "90px" }}
                             borderRadius="0px"
                             fontSize={{ base: "20px", md: "30px", lg: "40px" }}
-                            fontFamily="Roboto"
+                            fontFamily="Roboto ,sans-serif"
                             color="gray.200"
                             letterSpacing="5px"
                             _hover={{ bg: "#7997FF", color: "#373737" }}

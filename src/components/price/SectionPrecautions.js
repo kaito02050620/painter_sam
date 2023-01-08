@@ -35,7 +35,7 @@ const Description = styled.li`
     max-width: 1100px;
     margin: 0 auto;
     font-size: 20px;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     color: #5e5e5e;
     margin-bottom: 40px;
     line-height: 30px;

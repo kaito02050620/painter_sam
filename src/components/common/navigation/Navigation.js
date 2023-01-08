@@ -25,7 +25,6 @@ const HamburgarButton = styled.button`
     border: none;
     cursor: pointer;
     outline: none;
-    padding: 0;
     appearance: none;
     width: 80px;
     height: 40px;
@@ -105,13 +104,13 @@ const FormButton = styled.a`
     }
 
     @media (max-width: 590px) {
-        visibility: hidden;
+        display: none;
     }
 
     & p {
         display: block;
         font-size: 20px;
-        font-family: "Roboto";
+        font-family: "Roboto", sans-serif;
         color: #ebebeb;
         margin-left: 10px;
 
@@ -163,6 +162,8 @@ const HamburgarMenu = styled.div`
             width: 500px;
             color: #ebebeb;
             font-size: 35px;
+            font-family: "Roboto", sans-serif;
+
             text-align: center;
             margin-bottom: 30px;
             cursor: pointer;

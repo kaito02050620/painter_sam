@@ -23,7 +23,7 @@ const TitleBackGround = styled.h2`
     & p {
         display: block;
         font-size: 40px;
-        font-family: "Roboto";
+        font-family: "Roboto", sans-serif;
         color: #ebebeb;
 
         @media (max-width: 1000px) {

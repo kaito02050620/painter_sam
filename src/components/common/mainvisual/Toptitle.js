@@ -34,7 +34,7 @@ const TopContainerTitle = styled.div`
 
 const SubTitle1 = styled.p`
     display: inline-block;
-    font-family: "DotGothic16";
+    font-family: "DotGothic16", sans-serif;
     padding: 17px 17px 2px;
     background-color: #5e5e5e;
     color: #ebebeb;

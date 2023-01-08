@@ -6,7 +6,7 @@ import TopNavigation from "../navigation/Navigation";
 const TopContainer = styled.div`
     max-width: 1560px;
     height: 100vh;
-    padding: 0 30px;
+    padding: 0 25px;
     margin: 0 auto;
     box-sizing: border-box;
 `;
