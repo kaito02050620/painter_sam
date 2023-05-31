@@ -30,6 +30,7 @@ const BackGround = styled.div`
 
   @media (max-width: 500px) {
     margin-bottom: 30px;
+    padding: 20px;
   }
 `;
 const PriceItems = styled.ul``;
@@ -169,7 +170,7 @@ const ColorPrice = styled.p`
   }
 
   @media (max-width: 600px) {
-    margin-left: 15px;
+    margin-left: 10px;
     font-size: 18px;
   }
 `;
@@ -247,13 +248,13 @@ function SectionPrice() {
           <Wrapper>
             <ColorBox>
               <OneColorPalette>単色</OneColorPalette>
-              <ColorPrice>&yen;&nbsp;4000～</ColorPrice>
+              <ColorPrice>&yen;&nbsp;4,000～</ColorPrice>
             </ColorBox>
             <ColorBox>
               <ManyColorPalette>
                 <span>複数色</span>
               </ManyColorPalette>
-              <ColorPrice>&yen;&nbsp;6000～</ColorPrice>
+              <ColorPrice>&yen;&nbsp;6,000～</ColorPrice>
             </ColorBox>
           </Wrapper>
         </PriceItem>
@@ -269,10 +270,7 @@ function SectionPrice() {
         <PriceItem>
           <PriceTitle title="ファイナルマウス塗装" />
           <Wrapper>
-            <ColorPrice>
-              {/* 要相談 */}
-              &yen;&nbsp;10000～
-            </ColorPrice>
+            <ColorPrice>&yen;&nbsp;10,000～</ColorPrice>
           </Wrapper>
         </PriceItem>
         <PriceItem>
