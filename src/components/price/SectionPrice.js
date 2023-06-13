@@ -248,7 +248,7 @@ function SectionPrice() {
           <Wrapper>
             <ColorBox>
               <OneColorPalette>単色</OneColorPalette>
-              <ColorPrice>&yen;&nbsp;4,000～</ColorPrice>
+              <ColorPrice>&yen;&nbsp;5,000～</ColorPrice>
             </ColorBox>
             <ColorBox>
               <ManyColorPalette>
